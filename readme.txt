@@ -1,5 +1,5 @@
 
-#1 créer un répertoire ./lib, télécharger GWT, et y copier les jars suivants :
+#. crÃ©er un rÃ©pertoire ./lib, tÃ©lÃ©charger GWT, et y copier les jars suivants :
  gwt-api-checker.jar
  gwt-dev.jar
  gwt-ll.dll
@@ -7,10 +7,10 @@
  gwt-soyc-vis.jar
  gwt-user.jar
 
-#2 démarrer SBT dans le répertoire racine du projet
+#. dÃ©marrer SBT dans le rÃ©pertoire racine du projet
 
-#3 exécuter la commande : sbt> update
+#. exÃ©cuter la commande : sbt> update
 
-#4 Pour déboguer :
+#. Pour dÃ©boguer :
 - lancer Salut dans idea
-- lorsque le code scala est modifié, faire sbt> jetty-restart
+- lorsque le code scala est modifiÃ©, faire sbt> jetty-restart
