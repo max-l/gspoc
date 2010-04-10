@@ -8,6 +8,8 @@ class GwtBuild(info: ProjectInfo) extends DefaultWebProject(info) {
  
   val jasper = "org.apache.tomcat" % "jasper" % "6.0.18"
  
+  val squeryl = "org.squeryl" % "squeryl_2.8.0.Beta1-RC8" % "0.9.3"
+  
   override def jettyPort = 1234
  
   val h2 = "com.h2database" % "h2" % "1.2.127" 

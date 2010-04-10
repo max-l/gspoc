@@ -5,7 +5,6 @@
 
 <web-app>
   
-  <!-- Servlets -->
   <servlet>
     <servlet-name>greetServlet</servlet-name>
     <servlet-class>com.jlml.app1.server.GreetingServiceImpl</servlet-class>
@@ -15,10 +14,13 @@
     <servlet-name>greetServlet</servlet-name>
     <url-pattern>/salut/greet</url-pattern>
   </servlet-mapping>
-  
-  <!-- Default page to serve -->
+
   <welcome-file-list>
     <welcome-file>Salut.html</welcome-file>
   </welcome-file-list>
+
+  <listener>
+    <listener-class>com.jlml.app1.Bootstrap</listener-class>
+  </listener>
 
 </web-app>

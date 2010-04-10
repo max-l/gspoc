@@ -1,8 +1,13 @@
 package com.jlml.app1.server
 
-import com.jlml.app1.client.GreetingService;
-import com.jlml.app1.shared.FieldVerifier;
+import com.jlml.app1.client.GreetingService
+import com.jlml.app1.shared.{ProfileVO, FieldVerifier}
+import java.util.ArrayList
+import com.jlml.app1.model.Cruz;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+import org.squeryl.PrimitiveTypeMode._
+import Cruz._
+
 
 class GreetingServiceImpl extends RemoteServiceServlet with GreetingService {
 
@@ -20,6 +25,16 @@ class GreetingServiceImpl extends RemoteServiceServlet with GreetingService {
     val userAgent = getThreadLocalRequest.getHeader("User-Agent")
     
 	"qqqq////////////Hello, " + input + "!<br><br>I am running " + serverInfo + ".<br><br>It looks like you are using:<br>" + userAgent
+  }
+
+  def greetServer2(input: String): ArrayList[ProfileVO] = transaction {
+
+    val r = new ArrayList[ProfileVO]
+    
+    for(p <-profils.where(_.pseudonyme <> "Zozo"))
+      r.add(p.vo)
+
+    r
   }
 }
 
